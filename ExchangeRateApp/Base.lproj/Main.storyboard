@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="su1-3c-nnz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ipx-bU-HhJ">
+            <objects>
+                <tabBarController id="su1-3c-nnz" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eCm-D2-wH9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Zye-dP-Exh" kind="relationship" relationship="viewControllers" id="Hkr-bw-yRA"/>
+                        <segue destination="7am-6j-xSQ" kind="relationship" relationship="viewControllers" id="X3X-Ww-3Xt"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OwS-Zv-ujs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2291" y="-53"/>
+        </scene>
+        <!--Rates-->
+        <scene sceneID="1dc-dl-F9D">
+            <objects>
+                <tableViewController id="CKU-Nu-NCH" customClass="RateViewController" customModule="ExchangeRateApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KC4-k4-y4B">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="CKU-Nu-NCH" id="s9B-3q-SbJ"/>
+                            <outlet property="delegate" destination="CKU-Nu-NCH" id="NNH-fW-QQ1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Rates" id="c4d-EV-vso">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="N0Y-Wl-DwA">
+                            <connections>
+                                <action selector="refreshButton:" destination="CKU-Nu-NCH" id="3g0-3c-DfW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HD8-OQ-Gga" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-471.01449275362324" y="-438.61607142857139"/>
+        </scene>
+        <!--Offices-->
+        <scene sceneID="Ft7-d9-MWd">
+            <objects>
+                <tableViewController id="7K1-vd-4sA" customClass="OfficeViewController" customModule="ExchangeRateApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BBl-SW-dRU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="7K1-vd-4sA" id="LPM-4A-fr5"/>
+                            <outlet property="delegate" destination="7K1-vd-4sA" id="9fj-wp-5RS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Offices" id="Wsu-5O-gF1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="GZ7-Hg-Gjc">
+                            <connections>
+                                <action selector="searchButtonTapped:" destination="7K1-vd-4sA" id="yL3-LC-b9x"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ad-Yw-m3x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-471" y="254"/>
+        </scene>
+        <!--Rates-->
+        <scene sceneID="Hch-ut-gHM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zye-dP-Exh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Rates" image="dollarsign.circle.fill" catalog="system" id="Eo3-LZ-zuK"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="knH-e8-fYe">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CKU-Nu-NCH" kind="relationship" relationship="rootViewController" id="qBo-OS-PXW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EB9-Pd-Nzl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1378.2608695652175" y="-438.61607142857139"/>
+        </scene>
+        <!--Offices-->
+        <scene sceneID="JFv-Bb-EwF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7am-6j-xSQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Offices" image="house.fill" catalog="system" id="iuj-54-jJj"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E3P-zh-0wD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7K1-vd-4sA" kind="relationship" relationship="rootViewController" id="WYB-h5-3vn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lcc-9R-wXP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1378" y="254"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dollarsign.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="house.fill" catalog="system" width="64" height="52"/>
+    </resources>
+</document>
